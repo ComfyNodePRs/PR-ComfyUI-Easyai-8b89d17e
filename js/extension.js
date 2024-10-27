@@ -41,7 +41,7 @@ app.registerExtension({
             // 添加域名输入框标签
             const domainLabel = document.createElement('label');
             domainLabel.setAttribute('for', 'domainInput');
-            domainLabel.innerText = 'Domain (域名):';
+            domainLabel.innerText = 'BaseURL (接口地址):';
             domainLabel.style.color = 'white'; // 白色标签文字
             dialog.appendChild(domainLabel);
 
