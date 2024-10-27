@@ -9,7 +9,7 @@ from server import PromptServer
 async def upload_workflow(request):
     try:
         data = await request.json()
-        url = data["domain"] + "v1/openapi/upload/workflow"
+        url = data["domain"] + "/v1/openapi/upload/workflow"
         headers = {
             'Content-Type': 'application/json',
             'x-comfy-api-key': data["apiKey"]
