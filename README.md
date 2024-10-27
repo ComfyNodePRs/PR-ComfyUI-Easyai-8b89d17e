@@ -21,8 +21,7 @@ If you have a comfy-cli, you can simply execute `comfy node registry-install com
 ## Usage
 - After installation, you can use the Easyai nodes in your ComfyUI workflows.
 - For more detailed usage, please refer to the [金华岩石](https://jinhuayanshi.cn) or [三景AI](https://easyai.jinhuayanshi.cn) websites.
-- Follow me: 
-\ \ \ <img src="./docs/douyin.jpg" width="200" />
+- Follow me: <img src="./docs/douyin.jpg" width="200" />
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
