@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-easyai"
+description = "ComfyUI-Easyai is a powerful extension for ComfyUI that enables users to share workflows and models to easyai."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/jianzhichun/ComfyUI-Easyai"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "d9fd0ca0-fa6b-4972-b125-0e14d9283d6j"
+DisplayName = "ComfyUI-Easyai"
+Icon = "https://imgur.com/aQMebk4"
