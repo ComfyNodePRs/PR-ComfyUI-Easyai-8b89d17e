@@ -6,17 +6,8 @@ app.registerExtension({
     name: "ComfyUI-Easyai",
     async setup() {
         const menu = document.querySelector(".comfy-menu");
-        const separator = document.createElement("hr");
 
-        separator.style.margin = "20px 0";
-        separator.style.width = "100%";
-        menu.append(separator);
-
-        const uploadEasyaiButton = document.createElement("button");
-        uploadEasyaiButton.id = "uploadEasyaiButton";
-        uploadEasyaiButton.textContent = "上传Easyai";
-        // 点击按钮时弹出对话框
-        uploadEasyaiButton.onclick = () => {
+        const upload = () => {
             // 创建遮罩层
             const overlay = document.createElement('div');
             overlay.style.position = 'fixed';
@@ -208,6 +199,27 @@ app.registerExtension({
                 document.body.removeChild(overlay);
             }
         };
+
+        try {
+			let cmGroup = new (await import("../../scripts/ui/components/buttonGroup.js")).ComfyButtonGroup(
+				new(await import("../../scripts/ui/components/button.js")).ComfyButton({
+					icon: "upload",
+					action: upload,
+					tooltip: "上传Easyai"
+				}).element
+			);
+
+			app.menu?.settingsGroup.element.after(cmGroup.element);
+		}
+		catch(exception) {
+			console.log('ComfyUI is outdated. New style menu based features are disabled.');
+		}
+
+        const uploadEasyaiButton = document.createElement("button");
+        uploadEasyaiButton.id = "uploadEasyaiButton";
+        uploadEasyaiButton.textContent = "上传Easyai";
+        // 点击按钮时弹出对话框
+        uploadEasyaiButton.onclick = upload;
 
         uploadEasyaiButton.style.background = "linear-gradient(135deg, #8A00FF 0%, #00FFC6 100%)";
         uploadEasyaiButton.style.color = "black";

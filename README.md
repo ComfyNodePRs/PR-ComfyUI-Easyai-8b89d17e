@@ -19,6 +19,7 @@ If you have ComfyUI-Manager, you can simply search "Easyai for ComfyUI" from `Cu
 If you have a comfy-cli, you can simply execute `comfy node registry-install comfyui-easyai` in command line.
 
 ## Usage
+![use](./docs/use.gif)
 - After installation, you can use the Easyai nodes in your ComfyUI workflows.
 - For more detailed usage, please refer to the [金华岩石](https://jinhuayanshi.cn) or [三景AI](https://easyai.jinhuayanshi.cn) websites.
 - Follow me: <img src="./docs/douyin.jpg" width="200" />
