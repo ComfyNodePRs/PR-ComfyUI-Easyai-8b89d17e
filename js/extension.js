@@ -156,7 +156,7 @@ app.registerExtension({
                         localStorage.setItem('easyai-x-comfy-api-key', apiKey);
                         localStorage.setItem('easyai-domain', domain);
                         app.graphToPrompt().then((p2) => {
-                            const workflow = JSON.stringify(p2.output);
+                            const workflow = JSON.stringify(p2.output, null, 2);
                             api.fetchApi('/easyai/upload_workflow', {
                                 method: 'POST',
                                 headers: {
